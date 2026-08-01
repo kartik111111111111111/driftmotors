@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DRIFT MOTORS — Precision in Every Curve</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="noise"></div>
+<div class="cursor" id="cursor"><div class="cursor-dot"></div><div class="cursor-ring"></div></div>
+<div class="progress" id="progress"></div>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <span class="logo">DRIFT MOTORS</span>
+    <span class="logo-sub">STUDIO EDITION — 001</span>
+  </div>
+  <div class="topbar-center" id="clock">--:--:-- UTC • MUSEUM MODE</div>
+  <div class="topbar-right">
+    <button class="menu-btn" id="menuBtn"><span class="bar"></span><span class="bar"></span></button>
+  </div>
+</header>
+
+<nav class="overlay-menu" id="overlayMenu">
+  <div class="overlay-inner">
+    <div class="overlay-col">
+      <p class="mono">NAVIGATION / 00—05</p>
+      <a href="#hero" class="overlay-link" data-index="00"><span>00</span> UNVEIL</a>
+      <a href="#manifesto" class="overlay-link" data-index="01"><span>01</span> MANIFESTO</a>
+      <a href="#walk" class="overlay-link" data-index="02"><span>02</span> ENGINEERING</a>
+      <a href="#perf" class="overlay-link" data-index="03"><span>03</span> PERFORMANCE</a>
+      <a href="#interior" class="overlay-link" data-index="04"><span>04</span> INTERIOR</a>
+      <a href="#config" class="overlay-link" data-index="05"><span>05</span> CONFIGURE</a>
+    </div>
+    <div class="overlay-col small">
+      <p class="mono">EST. 2026 — ELECTRIC SCULPTURE LAB</p>
+      <p class="overlay-desc">This is not a dealership. This is an exhibition of velocity, restrained to its essential form. Machined from aluminum, carbon, glass and silence.</p>
+      <div class="contact-line">inquiry@driftmotors.studio</div>
+    </div>
+  </div>
+  <div class="overlay-bg-car"></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-wrap" id="hero">
+  <div class="hero-sticky">
+    <div class="hero-meta mono">
+      <span>[DRFT-001 FLAGSHIP]</span>
+      <span class="meta-light" id="lightPos">LIGHT 0.00 / REFLECTION 0.00</span>
+      <span>SCROLL TO UNVEIL ↓</span>
+    </div>
+    
+    <div class="hero-vehicle-stage" id="heroStage">
+      <div class="vehicle-silhouette">
+        <img id="heroCarImg" src="images/hero-side.png" alt="Drift Motors flagship side profile" />
+        <div class="sweep-light" id="sweepLight"></div>
+        <div class="bloom-layer"></div>
+        <div class="vehicle-reflection"></div>
+      </div>
+      
+      <div class="hero-callouts">
+        <div class="callout" id="callout1" style="--x:22%; --y:58%">
+          <div class="callout-line"></div>
+          <div class="callout-dot"></div>
+          <div class="callout-label"><span class="mono">FORGED MONOBLOCK</span><strong>21" AERODISC</strong></div>
+        </div>
+        <div class="callout" id="callout2" style="--x:68%; --y:38%">
+          <div class="callout-line"></div>
+          <div class="callout-dot"></div>
+          <div class="callout-label"><span class="mono">0.20 CD • ACTIVE</span><strong>PANORAMIC GLASS ROOF</strong></div>
+        </div>
+        <div class="callout" id="callout3" style="--x:48%; --y:72%">
+          <div class="callout-line"></div>
+          <div class="callout-dot"></div>
+          <div class="callout-label"><span class="mono">STRUCTURAL CORE</span><strong>CARBON FIBER CHASSIS</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-titles">
+      <h1 class="massive" id="heroTitle">
+        <span class="line"><span class="word" data-delay="0">PURE</span></span>
+        <span class="line muted"><span class="word" data-delay="0.1">PERFORMANCE.</span></span>
+      </h1>
+      <div class="hero-bottom">
+        <p class="hero-desc">A sculpture unveiled through light. Not driven — revealed. Every surface machined to redirect air, not attention.</p>
+        <div class="scroll-indicator">
+          <div class="scroll-line"><div class="scroll-fill" id="scrollFill"></div></div>
+          <span class="mono">00% UNVEILED</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-vignette"></div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto" id="manifesto">
+  <div class="manifesto-inner">
+    <div class="manifesto-label mono">[01] MANIFESTO / WE DON'T BUILD CARS</div>
+    <div class="manifesto-text-wrap">
+      <h2 class="editorial" id="manifestoTitle">
+        <span class="e-line">ENGINEERED</span>
+        <span class="e-line serif">to move.</span>
+        <span class="e-line">MOTION</span>
+        <span class="e-line serif">without noise.</span>
+        <span class="e-line">PRECISION</span>
+        <span class="e-line serif">in every curve.</span>
+      </h2>
+    </div>
+    <div class="manifesto-foot">
+      <div class="micro-copy">We stripped racing clichés. Removed spec tables. Left only what matters: weight, balance, silence, and the moment light touches carbon.</div>
+      <div class="dash-line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WALK AROUND ENGINEERING -->
+<section class="walk" id="walk">
+  <div class="walk-sticky">
+    <div class="walk-visual" id="walkVisual">
+      <div class="walk-img-stack">
+        <img class="walk-img active" data-step="0" src="images/front-quarter.png" alt="Front" />
+        <img class="walk-img" data-step="1" src="images/hero-side.png" alt="Side" />
+        <img class="walk-img" data-step="2" src="images/rear-detail.png" alt="Rear" />
+        <img class="walk-img" data-step="3" src="images/wheel.png" alt="Wheel" />
+        <img class="walk-img" data-step="4" src="images/aero.png" alt="Aero" />
+        <img class="walk-img" data-step="5" src="images/carbon.png" alt="Carbon" />
+      </div>
+      <div class="walk-lens" id="walkLens"></div>
+      <div class="walk-frame">
+        <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div><div class="frame-corner br"></div>
+      </div>
+      <div class="walk-specs mono">
+        <div class="w-spec"><span>CAM ANGLE</span><span id="camAngle">12.4° FRONT</span></div>
+        <div class="w-spec"><span>FOCUS POINT</span><span id="focusPoint">QUARTER PANEL</span></div>
+      </div>
+    </div>
+    <div class="walk-content">
+      <div class="walk-step active" data-step="0">
+        <span class="step-num mono">00 / SUSPENSION</span>
+        <h3>ADAPTIVE<br/>SUSPENSION</h3>
+        <p>Three-chamber air with predictive damping. Reads the road 500 times per second. The car doesn't react — it anticipates.</p>
+        <div class="tech-lines"><i></i><i></i><i></i></div>
+      </div>
+      <div class="walk-step" data-step="1">
+        <span class="step-num mono">01 / SILHOUETTE</span>
+        <h3>MONOLITHIC<br/>SURFACE</h3>
+        <p>No ornament. One continuous tension line from headlamp to tail. Stamped in aluminum, finished by hand.</p>
+        <div class="tech-lines"><i></i><i></i><i></i></div>
+      </div>
+      <div class="walk-step" data-step="2">
+        <span class="step-num mono">02 / LIGHT</span>
+        <h3>CERAMIC<br/>BRAKES</h3>
+        <p>410mm silicon-carbide rotors. Brake-light red is the only permitted hue. It appears only when needed.</p>
+        <div class="tech-lines"><i></i><i></i><i></i></div>
+      </div>
+      <div class="walk-step" data-step="3">
+        <span class="step-num mono">03 / CONTACT</span>
+        <h3>FORGED<br/>PRECISION</h3>
+        <p>21” monoblock wheels, hollow-spoke construction, 23% lighter. Every gram removed from unsprung mass.</p>
+        <div class="tech-lines"><i></i><i></i><i></i></div>
+      </div>
+      <div class="walk-step" data-step="4">
+        <span class="step-num mono">04 / AERODYNAMICS</span>
+        <h3>AIR AS<br/>MATERIAL</h3>
+        <p>Cd 0.20. Active flaps, sealed underbody, flush glass. Engineering invisibility.</p>
+        <div class="tech-lines"><i></i><i></i><i></i></div>
+      </div>
+      <div class="walk-step" data-step="5">
+        <span class="step-num mono">05 / MATERIALS</span>
+        <h3>CARBON<br/>CORE</h3>
+        <p>Monocoque woven at 12k tow, cured 9 hours. Not for looks — for silence.</p>
+        <div class="tech-lines"><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFORMANCE -->
+<section class="perf" id="perf">
+  <div class="perf-header">
+    <p class="mono">PERFORMANCE / MEASURED IN SENSATION, NOT SPEC SHEETS</p>
+    <h2 class="massive small"><span class="outline">NUMBERS THAT</span><br/>MOVE LIKE LIGHT</h2>
+  </div>
+  <div class="perf-grid">
+    <div class="perf-cell">
+      <div class="perf-value-wrap">
+        <span class="perf-num" data-target="2.1"><em>0</em>.<em>0</em></span>
+        <span class="perf-unit">S</span>
+      </div>
+      <div class="perf-label"><span class="mono">ACCELERATION</span><strong>0–100 KM/H</strong></div>
+      <div class="perf-bar"><div class="perf-bar-fill" data-fill="72"></div></div>
+    </div>
+    <div class="perf-cell">
+      <div class="perf-value-wrap">
+        <span class="perf-num" data-target="1020"><em>0</em></span>
+        <span class="perf-unit">HP</span>
+      </div>
+      <div class="perf-label"><span class="mono">DUAL MOTOR AWD</span><strong>HORSEPOWER</strong></div>
+      <div class="perf-bar"><div class="perf-bar-fill" data-fill="92"></div></div>
+    </div>
+    <div class="perf-cell">
+      <div class="perf-value-wrap">
+        <span class="perf-num" data-target="680"><em>0</em></span>
+        <span class="perf-unit">KM</span>
+      </div>
+      <div class="perf-label"><span class="mono">WLTP EST.</span><strong>RANGE</strong></div>
+      <div class="perf-bar"><div class="perf-bar-fill" data-fill="84"></div></div>
+    </div>
+    <div class="perf-cell">
+      <div class="perf-value-wrap">
+        <span class="perf-num" data-target="1340"><em>0</em></span>
+        <span class="perf-unit">NM</span>
+      </div>
+      <div class="perf-label"><span class="mono">INSTANT</span><strong>TORQUE</strong></div>
+      <div class="perf-bar"><div class="perf-bar-fill" data-fill="95"></div></div>
+    </div>
+  </div>
+  <div class="perf-foot mono">*Figures engineering targets. The feeling is final.</div>
+</section>
+
+<!-- INTERIOR -->
+<section class="interior" id="interior">
+  <div class="interior-sticky">
+    <div class="interior-bg">
+      <img src="images/interior.png" alt="Interior" class="interior-img" id="interiorImg" />
+      <div class="interior-fade"></div>
+      <div class="interior-ambient" id="ambient"></div>
+    </div>
+    <div class="interior-content">
+      <div class="interior-left">
+        <p class="mono">04 / INTERIOR — LUXURY ARCHITECTURE</p>
+        <h2 class="massive xsmall">GLASS.<br/>LEATHER.<br/>ALUMINIUM.<br/><span class="serif">SILENCE.</span></h2>
+      </div>
+      <div class="interior-right">
+        <div class="arch-card">
+          <span class="mono">MATERIAL STUDY</span>
+          <p>No buttons. Two materials meet at a 0.5mm reveal. Brushed aluminum cooled to touch, unstitched leather that ages with you.</p>
+          <div class="arch-line"></div>
+          <ul class="mono arch-list">
+            <li>› Panoramic Glass Roof — 1.4m² uninterrupted</li>
+            <li>› Floating Console — Machined from single billet</li>
+            <li>› Ambient — 0–3 lux, follows circadian</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery-header">
+    <h2 class="massive small">FORM<br/><span class="serif">EDGES AWAY</span> FROM FUNCTION</h2>
+    <p class="mono">GALLERY / OBJECT STUDY 001—005</p>
+  </div>
+  <div class="gallery-masonry">
+    <div class="g-item large" data-tilt>
+      <img src="images/gallery-1.png" alt="Gallery 1" loading="lazy"/>
+      <div class="g-caption mono">BRUTALIST ENCLOSURE / 06:22</div>
+    </div>
+    <div class="g-item small offset">
+      <img src="images/front-quarter.png" alt="Front detail" loading="lazy"/>
+      <div class="g-caption mono">HEADLAMP SLIT — 2.1MM</div>
+    </div>
+    <div class="g-item medium">
+      <img src="images/wheel.png" alt="Wheel" loading="lazy"/>
+      <div class="g-caption mono">FORGED • HOLLOW • 23% LIGHTER</div>
+    </div>
+    <div class="g-item tall">
+      <img src="images/rear-detail.png" alt="Rear" loading="lazy"/>
+      <div class="g-caption mono">CONTINUOUS BRAKE LINE / RED ONLY</div>
+    </div>
+    <div class="g-item medium offset2">
+      <img src="images/carbon.png" alt="Carbon" loading="lazy"/>
+      <div class="g-caption mono">12K TOW WEAVE — STRUCTURAL</div>
+    </div>
+    <div class="g-item large">
+      <img src="images/interior.png" alt="Interior" loading="lazy"/>
+      <div class="g-caption mono">CABIN AS CHAPEL — NEGATIVE SPACE</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIGURATION -->
+<section class="config" id="config">
+  <div class="config-left">
+    <div class="config-stage" id="configStage">
+      <img src="images/hero-side.png" alt="Config car" id="configCar" />
+      <div class="config-tint" id="configTint"></div>
+      <div class="config-reflect"></div>
+      <div class="config-wheel-marker" id="wheelMarker"></div>
+    </div>
+    <div class="config-env mono">ENVIRONMENT: STUDIO VOID • REFLECTANCE 0.04</div>
+  </div>
+  <div class="config-right">
+    <p class="mono">05 / CONFIGURE — MATERIAL SELECTION</p>
+    <h2 class="config-title">BUILD A<br/>STATEMENT.</h2>
+    
+    <div class="cfg-group">
+      <div class="cfg-label mono"><span>EXTERIOR FINISH</span><span id="finishName">GRAPHITE MONOLITH</span></div>
+      <div class="cfg-swatches" id="finishSwatches">
+        <button class="swatch active" data-finish="graphite" data-name="GRAPHITE MONOLITH" style="--c:#121212"></button>
+        <button class="swatch" data-finish="aluminum" data-name="RAW ALUMINIUM" style="--c:#c8cfd6"></button>
+        <button class="swatch" data-finish="carbon" data-name="EXPOSED CARBON" style="--c:#1e1e1e; background-image: repeating-linear-gradient(45deg, #111 0 2px, #222 2px 4px)"></button>
+        <button class="swatch" data-finish="ice" data-name="POLAR GLASS WHITE" style="--c:#f3f5f7"></button>
+        <button class="swatch" data-finish="red" data-name="BRAKE LIGHT EDITION" style="--c:#111"></button>
+      </div>
+    </div>
+
+    <div class="cfg-group">
+      <div class="cfg-label mono"><span>WHEEL DESIGN</span><span id="wheelName">AERODISC 21"</span></div>
+      <div class="cfg-wheels" id="wheelOptions">
+        <button class="wheel-opt active" data-wheel="aerodisc">
+          <span class="wheel-icon"><i class="w-disc"></i></span><span class="mono">AERODISC</span>
+        </button>
+        <button class="wheel-opt" data-wheel="monoblock">
+          <span class="wheel-icon"><i class="w-mono"></i></span><span class="mono">MONOBLOCK</span>
+        </button>
+        <button class="wheel-opt" data-wheel="hollow">
+          <span class="wheel-icon"><i class="w-hollow"></i></span><span class="mono">HOLLOW SPOKE</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="cfg-group">
+      <div class="cfg-label mono"><span>INTERIOR</span><span id="interiorName">NOIR LEATHER</span></div>
+      <div class="cfg-interior" id="interiorOptions">
+        <button class="int-opt active" data-int="noir" data-name="NOIR LEATHER">NOIR</button>
+        <button class="int-opt" data-int="stone" data-name="STONE ALCANTARA">STONE</button>
+        <button class="int-opt" data-int="clay" data-name="CLAY WOOL">CLAY</button>
+      </div>
+    </div>
+
+    <div class="cfg-group">
+      <div class="cfg-label mono"><span>AMBIENT LIGHTING</span><span id="ambientName">COOL WHITE 0.8 LUX</span></div>
+      <div class="cfg-ambient" id="ambientOptions">
+        <button class="amb-opt active" data-amb="white" data-name="COOL WHITE 0.8 LUX" style="--ac:#e8eef5"></button>
+        <button class="amb-opt" data-amb="red" data-name="BRAKE RED 0.4 LUX" style="--ac:#ff1a1a"></button>
+        <button class="amb-opt" data-amb="off" data-name="VOID — NO LIGHT" style="--ac:#111"></button>
+      </div>
+    </div>
+
+    <div class="cfg-cta">
+      <div class="cfg-price mono"><span>EST. CONFIGURATION</span><span>DM-001 / RESERVE £2,500</span></div>
+      <button class="mechanical-btn" id="reserveBtn"><span class="btn-top">RESERVE SCULPTURE</span><span class="btn-bottom mono">MECHANICAL ACTION — PRESS & HOLD</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ENDING -->
+<section class="ending" id="ending">
+  <div class="ending-light" id="endingLight"></div>
+  <div class="ending-car">
+    <img src="images/hero-side.png" alt="Final" id="endingCar" />
+    <div class="ending-glow"></div>
+  </div>
+  <div class="ending-text">
+    <h2 class="massive small">SILENCE<br/>IS THE<br/>Loudest<br/><span class="serif">PERFORMANCE.</span></h2>
+    <p class="mono ending-sub">No engine roar. Just air moving around intent.</p>
+    <button class="mechanical-btn inverted" id="finalReserve"><span class="btn-top">ENTER THE VOID</span></button>
+    <div class="ending-footer mono">
+      <span>DRIFT MOTORS © 2026</span>
+      <span>ENGINEERED TO MOVE — BUILT TO LAST</span>
+      <span>SCROLL TO TOP ↑</span>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="modal">
+  <div class="modal-bg" id="modalBg"></div>
+  <div class="modal-card">
+    <span class="mono">RESERVATION / DM-001</span>
+    <h3>SCULPTURE RESERVED.</h3>
+    <p>You will receive a black envelope within 48 hours. No emails. No tracking. Just paper, weight, and a stamped seal.</p>
+    <button class="mechanical-btn" id="modalClose"><span class="btn-top">ACKNOWLEDGED</span></button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
