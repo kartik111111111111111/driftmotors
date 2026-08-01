@@ -9,7 +9,37 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="is-loading">
+<div class="loader" id="loader" aria-hidden="false">
+  <div class="loader-inner">
+    <div class="loader-top mono">
+      <span>DRIFT MOTORS — SYSTEM BOOT</span>
+      <span id="loaderCount">00%</span>
+    </div>
+    <div class="loader-main">
+      <h1 class="loader-logo">DRIFT<br/><span class="outline">MOTORS</span></h1>
+      <div class="loader-visual">
+        <div class="loader-car-wrap">
+          <img id="loaderCar" src="images/hero-side.png" alt="" />
+          <div class="loader-car-light"></div>
+          <div class="loader-car-scan" id="loaderScan"></div>
+        </div>
+      </div>
+      <div class="loader-track"><div class="loader-fill" id="loaderFill"></div></div>
+      <div class="loader-status mono">
+        <span id="loaderStatus">MACHINING LIGHT • LOADING SCULPTURE</span>
+        <span id="loaderNum">00 / 00 ASSETS</span>
+      </div>
+      <div class="loader-files mono" id="loaderFiles"></div>
+    </div>
+    <div class="loader-bottom mono">
+      <span>STUDIO EDITION 001 — MUSEUM MODE — EST 2026</span>
+      <span>ENTRY LOCKED UNTIL RENDER COMPLETE</span>
+    </div>
+  </div>
+  <div class="loader-border"></div>
+</div>
+
 <div class="noise"></div>
 <div class="cursor" id="cursor"><div class="cursor-dot"></div><div class="cursor-ring"></div></div>
 <div class="progress" id="progress"></div>
